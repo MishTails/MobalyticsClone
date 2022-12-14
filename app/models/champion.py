@@ -19,4 +19,18 @@ class Champion(db.Model):
   item_id_B = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('items.id')))
   item_id_C = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('items.id')))
 
-  def to_dict
+  def to_dict(self):
+    return {
+      'id': self.id,
+      'name': self.name,
+      'origin': self.origin,
+      'trait': self.trait,
+      'tier': self.tier,
+      'spellName': self.spellName,
+      'startMana': self.startMana,
+      'manaCost': self.manaCost,
+      'spellDesc': self.spellDesc,
+      'item_id_A': self.item_id_A,
+      'item_id_B': self.item_id_B,
+      'item_id_C': self.item_id_C
+    }
