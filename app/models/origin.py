@@ -9,6 +9,10 @@ class Origin(db.Model):
   id = db.Column(db.Integer, primary_key=True)
   name = db.Column(db.String)
   desc = db.Column(db.String)
+  breakpoint_A = db.Column(db.String)
+  breakpoint_B = db.Column(db.String)
+  breakpoint_C = db.Column(db.String)
+  breakpoint_D = db.Column(db.String)
 
   def to_dict(self):
     return {
