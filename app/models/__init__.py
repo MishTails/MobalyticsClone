@@ -10,3 +10,5 @@ from .champion import Champion
 from .component import Component
 from .guide import Guide
 from .item import Item
+from .origin import Origin
+from .trait import Trait
