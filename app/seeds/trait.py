@@ -44,8 +44,42 @@ def seed_traits():
   duelist = Trait(
     name="Duelist",
     desc="Innate: increased movement speed. Duelists' basic attacks grant bonus Attack Speed, up to 10 stacks.",
-    breakpoint_A="(2) +6% Attack Speed per stack"
-    breakpoint_B="(4) +12% Attack Speed per stack"
-    breakpoint_C="(6) +20% Attack Speed per stack"
+    breakpoint_A="(2) +6% Attack Speed per stack",
+    breakpoint_B="(4) +12% Attack Speed per stack",
+    breakpoint_C="(6) +20% Attack Speed per stack",
     breakpoint_D="(8) +30% Attack Speed per stack"
   )
+
+  forecaster = Trait(
+    name="Forecaster",
+    desc="""At the start of combat, Forecaster champions grant adjacent allies different buffs depending on the current weather, which changes every game.
+
+    Sunny Weather:
+    Combat start: Grant a 400/600/4000 Health shield to adjacent allies for 10/10/45 seconds.
+
+    Windy Weather:
+    Combat start: grant bonus Attack Damage and Ability Power to adjacent allies, increasing by 15/25/150%\ every 5 seconds.
+
+    Rainy Weather:
+    At the start of combat, Forecaster champions grant adjacent allies 20 / 40 / 100 mana until they have cast 1/1/100 spells. """,
+    breakpoint_A ="(1) ??? (Randomly selected per game)"
+
+  )
+
+  hacker = Trait(
+    name="Hacker",
+    desc="Hackers gain Omnivamp and summon a H4ckerr!m. Any unit placed in the rider hex will be sent to the enemy backline and is untargetable for the first 2 seconds of combat. Omnivamp: heal for a percentage of damage dealt",
+    breakpoint_A="(2) 15%\ Omnivamp",
+    breakpoint_B="(3) 40%\ Omnivamp",
+    breakpoint_C="(4) 70%\ Omnivamp",
+  )
+
+  heart = Trait(
+    name="Heart",
+    desc="When Heart units cast their Ability, your team gains stacking Ability Power for the rest of combat.",
+    breakpoint_A="(2) +4 Ability Power",
+    breakpoint_B="(4) +7 Ability Power",
+    breakpoint_C="(6) +10 Ability Power"
+  )
+
+  
