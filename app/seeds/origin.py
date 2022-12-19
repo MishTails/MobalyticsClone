@@ -9,7 +9,7 @@ def seed_origins():
     breakpoint_B="(4) [Add another effect to the program]"
     breakpoint_C="(6) Boost previous tier by 180%"
   )
-  anima_squad = Origin(
+  animasquad = Origin(
     name="Anima Squad"
     desc="Anima Squad members build fame for scoring champion kills. When they pause to celebrate a kill, they permanently gain 6 maximum Health per point of fame. Fame immediately benefits the whole Anima Squad."
     breakpoint_A="(3) 15% Attack Damage and 15 Ability Power"
@@ -86,3 +86,24 @@ def seed_origins():
     breakpoint_A="(3) Crack 1 vault lock after a player combat win, and 3 after a player combat loss"
     breakpoint_B="(5) Crack 2 vault lock after a player combat win, and 5 after a player combat loss"
   )
+  db.session.add(admin)
+  db.session.add(animasquad)
+  db.session.add(arsenal)
+  db.session.add(civilian)
+  db.session.add(gadgeteen)
+  db.session.add(lasercorps)
+  db.session.add(mechaprime)
+  db.session.add(oxforce)
+  db.session.add(starguardian)
+  db.session.add(supers)
+  db.session.add(threat)
+  db.session.add(underground)
+  db.session.commit()
+
+def undo_origins():
+    if environment == "production":
+        db.session.execute(f"TRUNCATE table {SCHEMA}.origins RESTART IDENTITY CASCADE;")
+    else:
+        db.session.execute("DELETE FROM origins")
+
+    db.session.commit()
