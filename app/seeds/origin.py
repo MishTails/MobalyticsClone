@@ -52,4 +52,37 @@ def seed_origins():
     breakpoint_B="(5) All Mechas gain 45 Ability Power and 45% Attack Damage; The PRIME gains double this amount."
   )
 
-  
+  oxforce = Origin(
+    name="Ox Force"
+    desc= "Ox Force units gain a range of Attack Speed that ramps as they lose Health. Once per combat, they become invulnerable for 1 seconds as they defend the city with their last breath."
+    breakpoint_A="(2) 15%\ - 30%\ Attack Speed."
+    breakpoint_B="(4) 35%\ - 70%\ Attack Speed."
+    breakpoint_C="(6) 70%\ - 140%\ Attack Speed."
+    breakpoint_D="(8) 125%\ - 250%\ Attack Speed."
+  )
+
+  starguardian = Origin(
+    name="Star Guardian"
+    desc="Gain more Mana from all sources"
+    breakpoint_A="(3) 40%\ additional mana"
+    breakpoint_B="(5) 70%\ additional mana"
+    breakpoint_C="(7) 120%\ additional mana"
+    breakpoint_D="(9) 200%\ additional mana"
+  )
+
+  supers = Origin(
+    name="Supers"
+    desc="(3) Combat start: strike a pose that grants your team 20%\ bonus damage, which increases by 5%\ for every 3-star champion on your team."
+  )
+
+  threat = Origin(
+    name="Threat"
+    desc="(1) Threats do not have a Trait bonus, but instead have powerful Abilities and increased base stats."
+  )
+
+  underground = Origin(
+    name="Underground"
+    desc="The Underground must sneak through the sewers and crack 10 locks to open a vault. When the vault opens, you may choose to take the loot now, or attempt another heist for even better rewards."
+    breakpoint_A="(3) Crack 1 vault lock after a player combat win, and 3 after a player combat loss"
+    breakpoint_B="(5) Crack 2 vault lock after a player combat win, and 5 after a player combat loss"
+  )
