@@ -21,3 +21,35 @@ def seed_origins():
     name="Arsenal"
     desc="(1) When deploying the Arsenal champion, players may choose which weapon he will equip."
   )
+
+  civilian = Origin(
+    name="Civilian"
+    desc="If there is a Civilian alive, your team is inspired to protect them by gaining Mana every 2 seconds."
+    breakpoint_A="(1) +2 Mana"
+    breakpoint_B="(2) +4 Mana"
+    breakpoint_C="(3) +10 Mana"
+  )
+
+  gadgeteen = Origin(
+    name="Gadgeteen"
+    desc="Gadgeteens create random modified weapon which with powerful effects. Any champion can equip the items, but they fall apart after 1 round."
+    breakpoint_A="(3) Create 1 item(s) each round"
+    breakpoint_B="(5) Create 2 item(s) each round"
+  )
+
+  lasercorps = Origin(
+    name="LaserCorps"
+    desc="When a LaserCorp agent attacks or is hit by an attack, their combat drone has a 50%\ chance to deal magic damage to the agent's target (0.5 second cooldown). When a LaserCorps agent dies, their drone is reassigned to the nearest living agent."
+    breakpoint_A="(3) 60 magic damage"
+    breakpoint_B="(6) 150 magic damage"
+    breakpoint_C="(9) 150 magic damage, and each agent gets a 2nd drone"
+  )
+
+  mechaprime = Origin(
+    name="Mecha: PRIME"
+    desc="Use the Mecha selector item to choose a PRIME. Combat start: the PRIME combines with the 2 nearest Mecha, absorbing 100%\ of their Health."
+    breakpoint_A="(3) The PRIME gains 60 Ability Power and 60% Attack Damage"
+    breakpoint_B="(5) All Mechas gain 45 Ability Power and 45% Attack Damage; The PRIME gains double this amount."
+  )
+
+  
