@@ -1,1 +1,3 @@
 clip-path: polygon(50% 5%, 90% 30%, 90% 70%, 50% 95%, 10% 70%, 10% 30%);
+
+add column to tables for trait/origin for number on each breakpoint
