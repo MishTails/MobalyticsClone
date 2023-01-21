@@ -112,3 +112,19 @@ def seed_traits():
     breakpoint_A="(3) 35%\ bonus damage, 20%\ for last alive",
     breakpoint_B="(6) 60%\ bonus damage, 40%\ for last alive"
   )
+
+  spellslinger = Trait(
+    name="Spellslinger",
+    desc="Every 5 seconds, the next attack instead fires a magic orb at a random target, which explodes for 50% Ability Power as magic damage.",
+    breakpoint_A="(2) +25 Ability Power",
+    breakpoint_B="(4) +55 Ability Power",
+    breakpoint_C='(6) +85 Ability Power',
+    breakpoint_D="(8) +125 Ability Power, Orb Damage 150%"
+  )
+
+  sureshot = Trait(
+    name="Sureshot",
+    desc="Combat start: gain bonus Attack Damage now, and every 4 seconds.",
+    breakpoint_A="(2) +10% Attack Damage",
+    breakpoint_B="(4) +20% Attack Damage"
+  )
