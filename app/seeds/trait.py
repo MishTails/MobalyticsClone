@@ -82,4 +82,33 @@ def seed_traits():
     breakpoint_C="(6) +10 Ability Power"
   )
 
-  
+  mascot = Trait(
+    name="Mascot",
+    desc="Your team heals a percentage of their maximum Health every 2 seconds, and Mascots heal double the amount. When Mascots die, they retreat to the sidelines to cheer on your team. Your team's healing increased by 1%\ for each cheering Mascot",
+    breakpoint_A="(2) 1.5%\ healing",
+    breakpoint_A="(4) 2.5%\ healing",
+    breakpoint_A="(6) 4.5%\ healing",
+    breakpoint_A="(8) 10%\ healing"
+  )
+
+  prankster = Trait(
+    name="Prankster",
+    desc="Once per combat at 50% Health, spawn a target dummy, move to a safe location, and restore 350 Health.",
+    breakpoint_A="(2) Once per combat at 50% Health, spawn a target dummy, move to a safe location, and restore 350 Health.",
+    breakpoint_B="(3) And, Prankster dummies stun the enemy that killed them for 1.5 seconds."
+  )
+
+  recon = Trait(
+    name="Recon",
+    desc="Innate: Gain 2 hex Attack Range. If there is an enemy nearby, Recon units will dash to safety before casting their Ability.",
+    breakpoint_A="(2) +20% Crit Chance",
+    breakpoint_B="(3) +75% Crit Chance",
+    breakpoint_C="(4) +100% Crit Chance and Recon Abilities can critically strike"
+  )
+
+  renegade = Trait(
+    name="Renegade",
+    desc="Renegade units deal bonus damage, and the last sone standing deals more.",
+    breakpoint_A="(3) 35%\ bonus damage, 20%\ for last alive",
+    breakpoint_B="(6) 60%\ bonus damage, 40%\ for last alive"
+  )
